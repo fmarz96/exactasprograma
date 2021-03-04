@@ -39,10 +39,6 @@ def propagacion(bosque):
 	for i in range(0, len(bosque) - 1, 1):
 		if bosque[i] == -1 and bosque[i+1] == 1:
 			bosque[i+1] = -1
-	# n = len(bosque) - 1
-	# while n > 0:
-		# if bosque[n] == -1 and bosque[n-1] == 1:
-		# 	bosque[n-1] = -1
 	for j in range(len(bosque) - 1, 0, -1):
 		if bosque[j] == -1 and bosque[j-1] == 1:
 			bosque[j-1] = -1
@@ -66,6 +62,7 @@ def dinamica(n, n_rep, p, f):
 		vivos_por_anio.append(cuantos(bosque, 1))
 	prom = np.mean(vivos_por_anio)
 	return prom
+
 
 b_1 = [1, 1, 1, -1, 0, 0, 0, -1, 1, 0]
 print(propagacion(b_1))
