@@ -1,3 +1,4 @@
+import random
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -94,7 +95,6 @@ def reproducir(tablero, coord):
 	c_x = coord[0]
 	c_y = coord[1]
 	if tablero[c_x][c_y] != " " and tablero[c_x][c_y] != "M":
-		vecinos = vecinos_de(tablero, coord)
 		ady = buscar_adyacente(tablero, coord, tablero[c_x][c_y])
 		if len(ady) > 0:
 			ady2 = buscar_adyacente(tablero, coord, " ")
@@ -127,6 +127,35 @@ def evolucionar(tablero):
 	tab2 = fase_reproduccion(tab1)
 	tab3 = fase_mover(tab2)
 	return tab3
+
+def evolucionar_en_el_tiempo(tablero, k):
+	for i in range(0, k, 1):
+		tab = evolucionar(tablero)
+	return tab
+
+def mezclar_celdas(tablero):
+	celdas = []
+	for i in range(1, tablero.shape[0]-1, 1):
+		for j in range(1, tablero.shape[0]-1, 1):
+			celdas.append((i, j))
+	random.shuffle(celdas)
+	return celdas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
