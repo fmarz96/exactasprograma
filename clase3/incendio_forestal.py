@@ -27,7 +27,6 @@ def cuantos(bosque, tipo_celda):
 		# 	tot += 1
 	# return tot
 
-
 def rayos(bosque, f):
 	for i in range(0, len(bosque), 1):
 		r = random.random()

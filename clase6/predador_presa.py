@@ -17,7 +17,6 @@ def es_borde(tablero, coord):
 		return True
 	else:
 		return False
-	#return tablero[coord[0], coord[1]] == "M"
 
 def vecinos_de(tablero, coord):
 	vecinos = []
@@ -129,7 +128,7 @@ def evolucionar(tablero):
 	return tab3
 
 def evolucionar_en_el_tiempo(tablero, k):
-	for i in range(0, k, 1):
+	for i in range(k):
 		tab = evolucionar(tablero)
 	return tab
 

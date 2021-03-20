@@ -3,7 +3,7 @@ def devolver_la_suma(numero1, numero2):
 	return suma
 
 def celsius_a_farenheit(temp_cel):
-	temp_far = (temp_cel - 32)*(5/9)
+	temp_far = temp_cel*(9/5) + 32
 	return temp_far
 
 def perimetro_cuadrado(lado):

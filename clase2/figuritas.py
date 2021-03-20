@@ -48,6 +48,7 @@ def generar_paquete(figus_total, figus_paquete):
 	i = 0
 	while i < figus_paquete:
 		num_figu = random.randint(0, figus_total - 1)
+		# if not hay_alguno(paquete, num_figu):
 		paquete.append(num_figu)
 		i = i + 1
 	return paquete
